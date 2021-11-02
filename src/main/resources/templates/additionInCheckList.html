@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+    <style>
+        .text1{
+            font: 14pt sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div align="center" class="text1">
+    <h1 th:text="${pageName}" style="color: blueviolet">Default app name</h1>
+    <hr/>
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div class="form-group">
+                        <textarea name="text" class="form-control" cols="30" rows="7" placeholder="Text"></textarea>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Добавить новый пост">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
