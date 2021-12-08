@@ -22,8 +22,7 @@ public class CheckListService {
 
     public void removeItemFromCheckList(String name){
         var item = checkList.stream().filter(x -> x.getItemName().equals(name)).findFirst();
-        if(item.isPresent())
-            checkList.remove(item.get());
+        item.ifPresent(value -> checkList.remove(value));
     }
 
     public Set<Item> getCheckList() {

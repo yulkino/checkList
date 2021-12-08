@@ -23,7 +23,9 @@ public class AdditionItemController {
 
     @PostMapping("/add")
     public String addPointInCheckList(@ModelAttribute("text") String name){
-        checkListService.addItemInCheckList(name);
+        if (!name.equals("")) {
+            checkListService.addItemInCheckList(name);
+        }
         return "redirect:/";
     }
 }

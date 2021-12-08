@@ -8,21 +8,18 @@
             font: 14pt sans-serif;
         }
         TABLE {
-            width: 100%; /* Ширина таблицы */
+            width: 100%; 
         }
         TD {
-            vertical-align: top; /* Выравнивание по верхнему краю ячейки */
+            vertical-align: top;
         }
         #col1 {
-            width: 600px; /* Ширина первой колонки */
-            /*background: #fc0; /* Цвет фона первой колонки */
+            width: 600px;
         }
         #col2 {
-            /*background: #afccdb; /* Цвет фона второй колонки */
         }
         #col3 {
-            width: 600px; /* Ширина третьей колонки */
-            /*background: #fc0; /* Цвет фона третьей колонки */
+            width: 600px;
         }
     </style>
 </head>
@@ -35,7 +32,7 @@
                 <fieldset>
                 <div class="row article" align="left" th:each="point : ${checkList}" >
                     <div>
-                        <form th:action="${point.itemName}" method="post">
+                        <form th:action="${'delete/' + point.itemName}" method="post">
                             <input type="checkbox" th:id="${point.itemName}" th:name="${point.itemName}">
                             <label name="text" th:for="${point.itemName}" th:text="${point.itemName}">Point</label>
                             <input type="submit" value="✖">
