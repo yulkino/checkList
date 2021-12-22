@@ -2,20 +2,20 @@ package task9.checkList.models;
 
 public class Item {
 
-    private final String itemName;
+    private String name;
 
     public Item(String name){
-        this.itemName = name;
+        this.name = name;
     }
 
 
-    public String getItemName() {
-        return itemName;
+    public String getName() {
+        return name;
     }
 
     @Override
     public int hashCode() {
-        return this.itemName.hashCode();
+        return this.name.hashCode();
     }
 
     @Override
@@ -25,6 +25,6 @@ public class Item {
         }
         Item other = (Item) o;
 
-        return this.itemName.equals(other.itemName);
+        return this.name.equals(other.name);
     }
 }
